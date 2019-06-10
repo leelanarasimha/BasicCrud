@@ -12,19 +12,22 @@ namespace BasicCrud.Pages.Users
 {
     public class ListModel : PageModel
     {
-        public String Message;
-        public List<User> users;
+        public String Message {get; set;}
+        public IEnumerable<User> users {get; set;}
 
-        public ListModel()
-        {
-                
-        }
 
+        [BindProperty(SupportsGet=true)]
+        public string SearchTerm {get; set;}
+
+       
         public void OnGet()
         {
             var usersObj = new UserRepository();
-            users = usersObj.GetAllUsers().ToList();
-            Message = "Hello Leela";
+            if (SearchTerm == null) {
+                users = usersObj.GetAllUsers();
+            } else {
+                users = usersObj.GetUserByName(SearchTerm);
+            }
         }
     }
 }

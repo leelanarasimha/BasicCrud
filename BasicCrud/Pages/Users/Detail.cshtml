@@ -1,0 +1,14 @@
+@page "{userId:int}"
+
+@model BasicCrud.Pages.Users.Detail
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div>Id: @Model.User.Id</div>
+<div>Name: @Model.User.Name</div>
+
+<div>
+    <a asp-page="List">Back to Search</a>
+</div>
