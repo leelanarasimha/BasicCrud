@@ -7,12 +7,31 @@
 }
 
 
-<div>
+<h1>
     Edit data for User @Model.UserDetails.Name
+</h1>
+
+
+<div>
+    <form method="post">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" asp-for="@Model.UserDetails.Name" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label>Age</label>
+            <input type="text" asp-for="@Model.UserDetails.Age" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="text" asp-for="@Model.UserDetails.Email"  class="form-control"/>
+        </div>
+
+        <div>
+            <input type="submit" name="submit" value="Update" class="btn btn-primary"/>
+        </div>
+    </form>
 </div>
-
-
-<div></div>
 
 
 
