@@ -29,10 +29,12 @@
                     <td>@user.Email</td>
                     <td>@user.Age</td>
                     <td><a asp-page="Detail" asp-route-userId="@user.Id">View Details</a></td>
+                    <td><a asp-page="Edit" asp-route-userId="@user.Id">Edit Details</a></td>
                 </tr>
             }
 
         </tbody>
     </table>
 </div>
+
 
