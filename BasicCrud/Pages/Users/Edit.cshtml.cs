@@ -1,8 +1,10 @@
+using System.Collections.Generic;
 using BasicCrud.core;
 using BasicCrud.core.Interfaces;
 using BasicCrud.core.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace BasicCrud.Pages.Users
 {
@@ -10,14 +12,24 @@ namespace BasicCrud.Pages.Users
 
         [BindProperty]
         public User UserDetails {get; set;}
-        private IUser _user;
-        public Edit(IUser user)
+        public IEnumerable<SelectListItem> locations;
+        private IUserRepository _user;
+        private readonly IHtmlHelper _htmlhelper;
+
+        public Edit(IUserRepository user, IHtmlHelper htmlhelper)
         {
             _user = user;
+            _htmlhelper = htmlhelper;
+            locations = _htmlhelper.GetEnumSelectList<Location>();
         }
 
-        public IActionResult OnGet(int userId) {
-            UserDetails = _user.GetUserById(userId);
+        public IActionResult OnGet(int? userId) {
+            if (userId.HasValue) {
+            UserDetails = _user.GetUserById(userId.Value);
+            } else {
+                UserDetails = new User();
+            }
+
             if (UserDetails == null) {
                 return RedirectToPage("./List");
             }
@@ -25,9 +37,21 @@ namespace BasicCrud.Pages.Users
         }
 
         public IActionResult OnPost() {
-            UserRepositoryObj.
 
-            return Page();
+            if (!ModelState.IsValid) {
+                return Page();
+            }
+
+            if (UserDetails.Id <=0) {
+                TempData["Message"] = "User Created Successfully";
+                UserDetails = _user.Add(UserDetails);
+            } else {
+                TempData["Message"] = "User Updated Successfully";
+                UserDetails = _user.Update(UserDetails);
+            }
+            
+            return RedirectToPage("./List");
+            
         }
     }
 }

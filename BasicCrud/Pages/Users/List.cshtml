@@ -6,7 +6,9 @@
 
 <h2>List</h2>
 
-<h2>@Model.Message</h2>
+@if (Model.Message != null) {
+<div class="alert alert-info">@Model.Message</div>
+}
 
 <div>
     <div>
@@ -28,6 +30,7 @@
                     <td>@user.Name</td>
                     <td>@user.Email</td>
                     <td>@user.Age</td>
+                    <td>@user.Location</td>
                     <td><a asp-page="Detail" asp-route-userId="@user.Id">View Details</a></td>
                     <td><a asp-page="Edit" asp-route-userId="@user.Id">Edit Details</a></td>
                 </tr>
@@ -35,6 +38,8 @@
 
         </tbody>
     </table>
+
+    <a asp-page="Edit" class="btn btn-primary">Create User</a>
 </div>
 
 

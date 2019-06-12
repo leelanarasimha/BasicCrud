@@ -6,13 +6,13 @@ using System.Text;
 
 namespace BasicCrud.core.Repository
 {
-    public class UserRepository : IUser
+    public class UserRepository : IUserRepository
     {
-        
+
         private List<User> users = new List<User>() {
-                new User() { Id=1, Name = "Leela", Email="Leela@gmail.com", Age=12},
-                new User() { Id=2, Name = "Naveen", Email = "naveen@gmail.com", Age = 30 },
-                new User() { Id=3, Name = "Rama Krishna", Email = "ramakrishna@gmail.com", Age = 30 }
+                new User() { Id=1, Name = "Leela", Email="Leela@gmail.com", Age=12, Location=Location.Bangalore},
+                new User() { Id=2, Name = "Naveen", Email = "naveen@gmail.com", Age = 30, Location=Location.Hyderabad },
+                new User() { Id=3, Name = "Rama Krishna", Email = "ramakrishna@gmail.com", Age = 30, Location=Location.Guntur }
         };
         
         public IEnumerable<User> GetAllUsers()
@@ -36,6 +36,24 @@ namespace BasicCrud.core.Repository
             return users;
         }
 
-       
+        public User Update(User user)
+        {
+            var userdetails = users.SingleOrDefault(u => u.Id == user.Id);
+            if (userdetails != null) {
+                userdetails.Name = user.Name;
+                userdetails.Age = user.Age;
+                userdetails.Email = user.Email;
+                userdetails.Location = user.Location;
+            }
+
+            return userdetails;
+        }
+
+        public User Add(User user) {
+            var id = users.Max(u => u.Id) + 1;
+            user.Id = id;
+            users.Add(user);
+            return user;
+        }
     }
 }

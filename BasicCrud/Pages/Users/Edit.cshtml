@@ -1,4 +1,4 @@
-@page "{userId:int}"
+@page "{userId:int?}"
 
 @model BasicCrud.Pages.Users.Edit;
 
@@ -17,18 +17,27 @@
         <div class="form-group">
             <label>Name</label>
             <input type="text" asp-for="@Model.UserDetails.Name" class="form-control" />
+            <span class="text-danger" asp-validation-for="UserDetails.Name"></span>
         </div>
         <div class="form-group">
             <label>Age</label>
-            <input type="text" asp-for="@Model.UserDetails.Age" class="form-control"/>
+            <input type="text" asp-for="@Model.UserDetails.Age" class="form-control" />
+            <span class="text-danger" asp-validation-for="UserDetails.Age"></span>
         </div>
+        <input type="hidden" asp-for="@Model.UserDetails.Id"/>
         <div class="form-group">
             <label>Email</label>
-            <input type="text" asp-for="@Model.UserDetails.Email"  class="form-control"/>
+            <input type="text" asp-for="@Model.UserDetails.Email" class="form-control" />
+            <span class="text-danger" asp-validation-for="UserDetails.Email"></span>
+        </div>
+        <div class="form-group">
+            <label>Location</label>
+            <select asp-items="@Model.locations" 
+            asp-for="@Model.UserDetails.Location" class="form-control"></select>
         </div>
 
         <div>
-            <input type="submit" name="submit" value="Update" class="btn btn-primary"/>
+            <input type="submit" name="submit" value="Update" class="btn btn-primary" />
         </div>
     </form>
 </div>

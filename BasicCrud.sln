@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicCrud", "BasicCrud\Basi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicCrud.core", "BasicCrud.core\BasicCrud.core.csproj", "{B4EFBDBC-AF90-40F5-A01B-005E191876EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicCrud.Data", "BasicCrud.Data\BasicCrud.Data.csproj", "{5F5C7248-AD1E-4C31-8BB2-8B29C99887B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B4EFBDBC-AF90-40F5-A01B-005E191876EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4EFBDBC-AF90-40F5-A01B-005E191876EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4EFBDBC-AF90-40F5-A01B-005E191876EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F5C7248-AD1E-4C31-8BB2-8B29C99887B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F5C7248-AD1E-4C31-8BB2-8B29C99887B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F5C7248-AD1E-4C31-8BB2-8B29C99887B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F5C7248-AD1E-4C31-8BB2-8B29C99887B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
