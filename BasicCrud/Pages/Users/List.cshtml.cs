@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using BasicCrud.core;
 using BasicCrud.core.Interfaces;
 using BasicCrud.core.Repository;
+using BasicCrud.Data.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 

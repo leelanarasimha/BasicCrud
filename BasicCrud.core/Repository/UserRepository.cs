@@ -1,14 +1,17 @@
-﻿using BasicCrud.core.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BasicCrud.core.Interfaces;
+using BasicCrud.Data.Models;
+
 
 namespace BasicCrud.core.Repository
 {
     public class UserRepository : IUserRepository
     {
 
+        
         private List<User> users = new List<User>() {
                 new User() { Id=1, Name = "Leela", Email="Leela@gmail.com", Age=12, Location=Location.Bangalore},
                 new User() { Id=2, Name = "Naveen", Email = "naveen@gmail.com", Age = 30, Location=Location.Hyderabad },

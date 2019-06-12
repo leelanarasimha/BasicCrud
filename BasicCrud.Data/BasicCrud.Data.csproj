@@ -4,11 +4,5 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\BasicCrud.core\BasicCrud.core.csproj" />
-  </ItemGroup>
 </Project>
