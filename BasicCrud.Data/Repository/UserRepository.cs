@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using BasicCrud.core.Interfaces;
 using BasicCrud.core.Models;
 
@@ -10,7 +8,6 @@ namespace BasicCrud.Data.Repository
 {
     public class UserRepository : IUserRepository
     {
-
         
         private List<User> users = new List<User>() {
                 new User() { Id=1, Name = "Leela", Email="Leela@gmail.com", Age=12, Location=Location.Bangalore},
@@ -57,6 +54,20 @@ namespace BasicCrud.Data.Repository
             user.Id = id;
             users.Add(user);
             return user;
+        }
+
+        public User Delete(int id)
+        {
+            var userdetails = users.FirstOrDefault(user => user.Id == id);
+            if (userdetails != null) {
+                users.Remove(userdetails);
+            }
+            return userdetails;
+        }
+
+        public int commit()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

@@ -16,7 +16,7 @@ namespace BasicCrud.core.Models
         public String Email { get; set; }
 
         [Required]
-        public int Age { get; set; }
+        public Nullable<int> Age { get; set; }
         public Location Location { get; set; }
     }
 }
