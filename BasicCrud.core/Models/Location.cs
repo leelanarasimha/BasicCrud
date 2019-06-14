@@ -1,4 +1,4 @@
-﻿namespace BasicCrud.Data.Models
+﻿namespace BasicCrud.core.Models
 {
     public enum Location
     {

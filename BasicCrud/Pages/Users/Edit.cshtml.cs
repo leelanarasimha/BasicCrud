@@ -1,8 +1,7 @@
 using System.Collections.Generic;
 using BasicCrud.core;
 using BasicCrud.core.Interfaces;
-using BasicCrud.core.Repository;
-using BasicCrud.Data.Models;
+using BasicCrud.core.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;

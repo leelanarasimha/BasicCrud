@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using BasicCrud.core.Interfaces;
-using BasicCrud.Data.Models;
+using BasicCrud.core.Models;
 
 
-namespace BasicCrud.core.Repository
+namespace BasicCrud.Data.Repository
 {
     public class UserRepository : IUserRepository
     {

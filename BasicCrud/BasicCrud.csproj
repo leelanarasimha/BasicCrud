@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BasicCrud.core\BasicCrud.core.csproj" />
+    <ProjectReference Include="..\BasicCrud.Data\BasicCrud.Data.csproj" />
   </ItemGroup>
 
 </Project>

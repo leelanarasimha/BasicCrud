@@ -1,6 +1,7 @@
 using BasicCrud.core;
-using BasicCrud.core.Repository;
-using BasicCrud.Data.Models;
+using BasicCrud.core.Interfaces;
+using BasicCrud.core.Models;
+using BasicCrud.Data.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -11,7 +12,7 @@ namespace BasicCrud.Pages.Users
 
         public User User {get; set;}
 
-        private readonly UserRepository userRepositoryObj;
+        private readonly IUserRepository userRepositoryObj;
 
         public Detail()
         {

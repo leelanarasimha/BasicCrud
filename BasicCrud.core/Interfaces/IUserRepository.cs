@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using BasicCrud.Data.Models;
+using BasicCrud.core.Models;
 
 namespace BasicCrud.core.Interfaces
 {

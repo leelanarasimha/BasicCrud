@@ -1,4 +1,4 @@
-using BasicCrud.Data.Models;
+using BasicCrud.core.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace BasicCrud.core
