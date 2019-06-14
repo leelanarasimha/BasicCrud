@@ -59,6 +59,8 @@ namespace BasicCrud.Pages.Users
                 UserDetails = _user.Update(UserDetails);
             }
 
+            _user.commit();
+
             return RedirectToPage("./List");
         }
     }

@@ -14,5 +14,7 @@ namespace BasicCrud.core.Interfaces
         User GetUserById(int Id);
         User Add(User user);
         User Update(User user);
+        User Delete(int id);
+        int commit();
     }
 }
