@@ -69,5 +69,10 @@ namespace BasicCrud.Data.Repository
         {
             throw new System.NotImplementedException();
         }
+
+        public int getCount()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

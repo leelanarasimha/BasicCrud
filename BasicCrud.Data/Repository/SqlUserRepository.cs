@@ -69,5 +69,10 @@ namespace BasicCrud.Data.Repository
         {
             return db.SaveChanges();
         }
+
+        public int getCount()
+        {
+            return db.Users.Count();
+        }
     }
 }
