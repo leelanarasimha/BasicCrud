@@ -1,0 +1,15 @@
+@page "{userId:int}"
+@model BasicCrud.Pages.Users.Delete
+@{
+    ViewData["title"] = "Delete";
+}
+
+<div>
+    Are you sure you want to delete the Rastaurant
+</div>
+<form method="post">
+    <div>
+        <input type="submit" value="Yes"/>
+        <a asp-page="./List">No</a>
+    </div>
+</form>
